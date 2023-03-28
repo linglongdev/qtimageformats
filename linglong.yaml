@@ -1,0 +1,26 @@
+package:
+  id: qtimageformats
+  name: qtimageformats
+  kind: lib
+  version: 5.11.3
+  description: |
+    qtimageformats
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+depends:
+- id: qtbase
+  version: 5.11.3.15
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/qtimageformats-opensource-src.git
+  version: uos/5.11.3
+  commit: 1bcae985d191b1b1628e0cbdb0bcce418fbde8ca
+  patch: []
+
+#插件问题见：https://code.qt.io/cgit/qt/qtimageformats.git/commit/?id=531c30ea66d2b8fe517c89bed149a938e16332ec  
+build:
+  kind: qmake
